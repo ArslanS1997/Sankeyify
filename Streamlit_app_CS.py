@@ -56,7 +56,7 @@ with st.sidebar:
     }
 </style>
 """, unsafe_allow_html=True)
-    image = Image.open('C:/Users/Arslan Shahid/Desktop/Firebird Technologies/Sankeyify/Full Text Logo Small.png')
+    image = Image.open('Full Text Logo Small.png')
     st.image(image,width=350)
     # st.markdown("![](C:\\Users\\Arslan Shahid\\Desktop\\Firebird Technologies\\Sankeyify\icon.png)", unsafe_allow_html=True)
 
@@ -114,6 +114,8 @@ if uploaded_file is not None:
             data = sm.make_data(df[c_size],c_size)
             fig = sm.make_sankey(data, sm.make_node(color=default_color))
             plotly_fig = st.plotly_chart(fig,use_container_width=True, key='plotly_fig')
+
+
             
             
             
